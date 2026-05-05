@@ -5,21 +5,21 @@
 class Aland < Formula
   desc "Publish and fork artifacts from the terminal"
   homepage "https://artifact.land"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/artifactland/aland/releases/download/v0.1.1/aland_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "6de255d716e8b4a64e442c4c353b456b7d609ee775ebfd11a44fdcccd62d80a6"
+      url "https://github.com/artifactland/aland/releases/download/v0.1.2/aland_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "2b0eabcc0700628a242789d5e9805cc7043377d4388f6b5abe9fdb094a9a4880"
 
       define_method(:install) do
         bin.install "aland"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/artifactland/aland/releases/download/v0.1.1/aland_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "199fc2a3a6890261ce4ed283814c8accae32bb46e3ef02694654a05911aef076"
+      url "https://github.com/artifactland/aland/releases/download/v0.1.2/aland_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "f6ecaf71c3fdfab349bb8dca8cf3d73e29c2e9a654c20b2f89d64121b1a5ee7d"
 
       define_method(:install) do
         bin.install "aland"
@@ -29,15 +29,15 @@ class Aland < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/artifactland/aland/releases/download/v0.1.1/aland_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "009dcd1f2e94748df47388810e18f5546c73f03996d6777d78aceb59ce3905e9"
+      url "https://github.com/artifactland/aland/releases/download/v0.1.2/aland_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "ba8d4af20cdc369deb5d4dbe28ddbe57556b59a4ab8ea7464f4f58d1f6d9a3ee"
       define_method(:install) do
         bin.install "aland"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/artifactland/aland/releases/download/v0.1.1/aland_0.1.1_Linux_arm64.tar.gz"
-      sha256 "456777e0ce5517789cfb67eafd066ad30f92f35af0b8450b8bcbdb3795f41c18"
+      url "https://github.com/artifactland/aland/releases/download/v0.1.2/aland_0.1.2_Linux_arm64.tar.gz"
+      sha256 "2c55be09b724d6d7e6493b1dd685c63a86e5cacf4cf2910bf0732175c7a7093b"
       define_method(:install) do
         bin.install "aland"
       end
